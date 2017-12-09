@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="drawer_item_icon_ids">
+        <item>@drawable/ic_drawer_icon</item>
+        <item>@drawable/ic_drawer_icon</item>
+        <item>@drawable/ic_drawer_icon</item>
+        <item>@drawable/ic_drawer_icon</item>
+        <item>@drawable/ic_drawer_icon</item>
+        <item>@drawable/ic_drawer_icon</item>
+    </integer-array>
+
+    <integer-array name="drawer_item_title_ids">
+        <item>@string/drawer_item</item>
+        <item>@string/drawer_item</item>
+        <item>@string/drawer_item</item>
+        <item>@string/drawer_item</item>
+        <item>@string/drawer_item</item>
+        <item>@string/drawer_item</item>
+    </integer-array>
+</resources>
