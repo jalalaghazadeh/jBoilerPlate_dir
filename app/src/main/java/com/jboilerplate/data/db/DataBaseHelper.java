@@ -4,10 +4,6 @@ import com.orm.SugarRecord;
 
 import java.util.ArrayList;
 
-/**
- * Created by user on 12/9/2017.
- */
-
 public class DataBaseHelper {
     /**
      * save a record

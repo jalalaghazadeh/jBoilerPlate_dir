@@ -11,12 +11,8 @@ import android.widget.Button;
 
 import com.jboilerplate.R;
 import com.jboilerplate.data.DataManager;
-import com.jboilerplate.data.http_call.Retrofit2Client;
-import com.jboilerplate.data.http_call.listener.IResponseAsListListener;
+import com.jboilerplate.data.http_call.listener.RetrofitResponseListenerAsList;
 import com.jboilerplate.data.http_call.models.BaseModel;
-import com.jboilerplate.data.http_call.models.CategoryModel;
-
-import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -56,7 +52,7 @@ public class HomeFragment extends Fragment {
 
     @OnClick(R.id.btn_action)
     public void onViewClicked() {
-        new DataManager(getContext()).getAllCategories(new IResponseAsListListener() {
+        new DataManager(getContext()).getAllCategories(new RetrofitResponseListenerAsList() {
             @Override
             public void onSuccess(Response response) {
                 BaseModel categories = (BaseModel) response.body();

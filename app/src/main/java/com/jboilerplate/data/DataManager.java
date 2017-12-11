@@ -3,12 +3,9 @@ package com.jboilerplate.data;
 import android.content.Context;
 
 import com.jboilerplate.data.http_call.Retrofit2Client;
-import com.jboilerplate.data.http_call.listener.IResponseAsListListener;
+import com.jboilerplate.data.http_call.listener.RetrofitResponseListenerAsList;
 import com.jboilerplate.data.http_call.models.BaseModel;
-import com.jboilerplate.data.http_call.models.CategoryModel;
 import com.jboilerplate.data.shared_preference.SharedPrefsHelper;
-
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -38,7 +35,7 @@ public class DataManager {
 
 
     // http-call
-    public void getAllCategories(final IResponseAsListListener responseListener){
+    public void getAllCategories(final RetrofitResponseListenerAsList responseListener){
         new Retrofit2Client(context).getApi().getCategory().enqueue(new Callback<BaseModel>() {
             @Override
             public void onResponse(Call<BaseModel> call, Response<BaseModel> response) {
